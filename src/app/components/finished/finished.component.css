@@ -1,0 +1,43 @@
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.content {
+    width: 100%;
+}
+
+
+.buttons-new-and-closed {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons-new-and-closed span {
+    font-weight: 600;
+    color: rgb(70, 69, 69);
+    font-size: 1.2rem;
+}
+
+.buttons-new-and-closed button {
+    margin: .5rem;
+}
+
+p {
+    text-align: end;
+    font-weight: 600;
+    color: rgb(114, 111, 111);
+    margin-bottom: 0;
+}
+
+mat-card {
+    margin-bottom: 1.2rem;
+}
+
+.goBack {
+    color: white !important;
+}

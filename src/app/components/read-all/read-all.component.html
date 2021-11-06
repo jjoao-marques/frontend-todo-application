@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="buttons-new-and-closed">
+        <button routerLink="create" class="new-todo " mat-raised-button color="primary">
+            <span class="material-icons">
+                add
+            </span>
+        </button>
+        <button (click)="goFinished()" class="mat-elevation-z8" mat-raised-button color="primary" matBadge="{{closed}}"
+            matBadgePosition="after" matBadgeColor="accent">
+            <span class="material-icons">
+                task
+            </span>
+        </button>
+    </div>
+    <div class="noRegistry" *ngIf="list.length; else semRegistro"></div>
+    <div class="content" *ngFor="let item of list">
+        <mat-card class="mat-elevation-z8">
+            <p>Data para finalizar: {{ item.dataParaFinalizar }}</p>
+            <mat-card-header>
+                <mat-card-title>{{item.titulo}}</mat-card-title>
+                <mat-card-subtitle>{{ item.descricao }}</mat-card-subtitle>
+            </mat-card-header>
+            <div class="actions">
+                <button (click)="finish(item)" mat-mini-fab color="primary">
+                    <mat-icon>done</mat-icon>
+                </button>
+                <button routerLink="update/{{ item.id }}" mat-mini-fab color="accent">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button (click)="deleteTodo(item.id)" mat-mini-fab color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </mat-card>
+    </div>
+</div>
+
+<ng-template #semRegistro>
+
+    <div class="semRegistro">
+            <span class="material-icons icon-sad">
+                sentiment_very_dissatisfied
+            </span>
+            <p>
+                Nenhuma tarefa criada
+            </p>
+        
+    </div>
+
+</ng-template>

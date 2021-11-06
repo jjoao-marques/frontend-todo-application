@@ -1,0 +1,20 @@
+img {
+    height: 3rem;
+}
+
+.header {
+    width: 100%;
+    justify-content: center;
+    height: 10%;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 1.2rem;
+    /* font-weight: 300; */
+}

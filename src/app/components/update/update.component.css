@@ -1,0 +1,30 @@
+form {
+    width: 70%;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+}
+
+.calendar {
+    display: flex;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: rgb(139, 138, 138);
+}
+
+.form-input {
+    width: 100%;
+}
+
+.actions {
+   display: flex;
+   justify-content: flex-start;
+}
+
+.actions button {
+    margin-right: 0.5rem;
+    padding: 0 1.5rem 0 1.5rem;
+}
