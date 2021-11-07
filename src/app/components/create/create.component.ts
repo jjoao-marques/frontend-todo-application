@@ -4,6 +4,7 @@ import { Router, RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -18,8 +19,11 @@ export class CreateComponent implements OnInit {
     finalizado: false
   }
 
+  minDate = new Date();
   titulo = new FormControl('',[Validators.minLength(1)]);
+  dataParaFinalizar = new FormControl('', Validators.required);
 
+  
   constructor(private router: Router, private todoService: TodoService) { }
 
   ngOnInit(): void {
@@ -54,3 +58,5 @@ export class CreateComponent implements OnInit {
   }
 
 }
+
+

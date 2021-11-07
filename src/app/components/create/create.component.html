@@ -4,9 +4,10 @@
   <div class="calendar">
     <mat-form-field class="date_finished" appearance="fill">
       <mat-label>DATA PARA FINALIZAR</mat-label>
-      <input [(ngModel)]="todo.dataParaFinalizar" name="todo.dataParaFinalizar" matInput [matDatepicker]="dp3" disabled>
-      <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
-      <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+      <input [(ngModel)]="todo.dataParaFinalizar" name="todo.dataParaFinalizar" [min]="minDate" matInput [matDatepicker]="MyDatePicker" disabled>
+      <mat-datepicker-toggle matSuffix [for]="MyDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #MyDatePicker disabled="false"></mat-datepicker>
+      <mat-error *ngIf="todo.dataParaFinalizar">{{ errorValidTitle() }}</mat-error>
     </mat-form-field>
   </div>
 
